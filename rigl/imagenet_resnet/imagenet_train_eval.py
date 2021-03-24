@@ -35,6 +35,7 @@ from rigl.imagenet_resnet import resnet_model
 from rigl.imagenet_resnet import utils
 from rigl.imagenet_resnet import vgg
 from official.resnet import imagenet_input
+import tensorflow as tf
 from tensorflow.contrib import estimator as contrib_estimator
 from tensorflow.contrib import tpu as contrib_tpu
 from tensorflow.contrib.model_pruning.python import pruning

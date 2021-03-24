@@ -1,0 +1,13 @@
+python rigl/imagenet_resnet/imagenet_train_eval.py \
+    --mode=train_and_eval \
+    --model_architecture=resnet --resnet_depth=34 \
+    --data_directory=$IMAGENET_PATH \
+    --use_folder_stub=False \
+    --output_dir="imagenet_resnet34_erk_sparsity73.79" \
+    --steps_per_checkpoint=50000 --keep_checkpoint_max=3 \
+    --train_steps=112590 --training_steps_multiplier=5.0 \
+    --steps_per_eval=50000 \
+    --num_parallel_calls=40 \
+    --training_method=rigl --mask_init_method=erdos_renyi_kernel \
+    --end_sparsity=0.7379 \
+    --first_layer_sparsity=-1
